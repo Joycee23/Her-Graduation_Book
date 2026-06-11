@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #d4a853;
+  --gold-light: #f0c878;
+  --gold-dark: #a07830;
+  --cream: #fdf6e8;
+  --cream-dark: #f5e6c8;
+  --navy: #0d1b2a;
+  --navy-mid: #1a2d42;
+  --navy-light: #243b55;
+  --rose: #e8a0a8;
+  --rose-light: #f7d0d8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-dancing { font-family: 'Dancing Script', cursive; }
+.font-inter { font-family: 'Inter', sans-serif; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatPetal {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 168, 83, 0.6); }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  25% { opacity: 0.95; transform: scale(1.01); }
+  50% { opacity: 0.9; transform: scale(0.99); }
+  75% { opacity: 0.97; transform: scale(1.005); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes sealBreak {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(0) rotate(45deg); opacity: 0; }
+}
+
+@keyframes envelopeOpen {
+  0% { transform: scaleY(0); opacity: 0; transform-origin: top; }
+  100% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Gold shimmer text */
+.text-gold-shimmer {
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold), var(--gold-light), var(--gold-dark));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Chapter ornament divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* Book page style */
+.book-page {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(212, 168, 83, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 50%, rgba(212, 168, 83, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 168, 83, 0.2);
+  border-radius: 1.5rem;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(212, 168, 83, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Visible section animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline connector */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+/* Letter paper style */
+.letter-paper {
+  background: linear-gradient(135deg, rgba(253, 246, 232, 0.03) 0%, rgba(253, 246, 232, 0.06) 100%);
+  border: 1px solid rgba(212, 168, 83, 0.25);
+  border-radius: 2px;
+  position: relative;
+}
+
+.letter-paper::after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(212, 168, 83, 0.15);
+}
+
+/* Particles canvas */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navigation dots */
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(212, 168, 83, 0.3);
+  border: 1px solid rgba(212, 168, 83, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav-dot.active, .nav-dot:hover {
+  background: var(--gold);
+  transform: scale(1.4);
+}
+
+/* Photo frame */
+.photo-frame {
+  border: 2px solid rgba(212, 168, 83, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.photo-frame:hover {
+  border-color: rgba(212, 168, 83, 0.7);
+  transform: scale(1.02);
+  box-shadow: 0 20px 60px rgba(212, 168, 83, 0.2);
+}
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(13, 27, 42, 0.8));
+}
+
+/* Time box envelope */
+.envelope {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.envelope:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Pride card */
+.pride-card {
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+.pride-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Cursor blink */
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--gold);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
