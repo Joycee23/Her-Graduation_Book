@@ -1,6 +1,7 @@
 "use client";
 import { chapter6 } from "@/content";
 import Reveal from "@/components/Reveal";
+import PasswordGate from "@/components/PasswordGate";
 import { useState } from "react";
 
 type LetterType = (typeof chapter6.letters)[number];
@@ -127,7 +128,7 @@ function LetterModal({ letter, onClose }: { letter: LetterType; onClose: () => v
   );
 }
 
-export default function Chapter6() {
+function TimeBoxContent() {
   const [openedLetters, setOpenedLetters] = useState<Set<string>>(new Set());
   const [activeLetter, setActiveLetter] = useState<LetterType | null>(null);
   const [breakingSeals, setBreakingSeals] = useState<Set<string>>(new Set());
@@ -149,13 +150,7 @@ export default function Chapter6() {
   };
 
   return (
-    <section
-      id="chapter6"
-      className="book-page min-h-screen py-24 px-6"
-      style={{
-        background: "linear-gradient(180deg, var(--navy) 0%, #0d1520 100%)",
-      }}
-    >
+    <>
       {/* Modal */}
       {activeLetter && (
         <LetterModal letter={activeLetter} onClose={() => setActiveLetter(null)} />
@@ -360,6 +355,29 @@ export default function Chapter6() {
           </div>
         </Reveal>
       </div>
+    </>
+  );
+}
+
+export default function Chapter6() {
+  return (
+    <section
+      id="chapter6"
+      className="book-page min-h-screen py-24 px-6"
+      style={{
+        background: "linear-gradient(180deg, var(--navy) 0%, #0d1520 100%)",
+      }}
+    >
+      <PasswordGate
+        password="17052004"
+        title="Hộp Thời Gian"
+        subtitle="Chương VI"
+        icon="📦"
+        hint="Một ngày đặc biệt của em..."
+      >
+        <TimeBoxContent />
+      </PasswordGate>
     </section>
   );
 }
+
