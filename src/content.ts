@@ -136,18 +136,18 @@ export const chapter4 = {
       color: "from-rose-400 to-pink-600",
     },
     {
-      sender: "Anh Trai",
-      role: "Anh An",
+      sender: "Anh An",
+      role: "Anh Trai",
       avatar: "🌸",
-      message: `A chị chúc mừng em gái đã tốt nghiệp đại học và chính thức trở thành cô giáo!,
+      message: `Anh chị chúc mừng em gái đã tốt nghiệp đại học và chính thức trở thành cô giáo!,
 Anh rất tự hào về những nỗ lực và thành quả em đã đạt được. Chúc em luôn giữ vững nhiệt huyết với nghề, yêu thương học trò và gặt hái thật nhiều thành công trên con đường mình đã chọn❤️
 
 Mãi là niềm tự hào của gia đình nhé!`,
       color: "from-purple-400 to-violet-600",
     },
     {
-      sender: "Anh Trai",
-      role: "Anh Lịnh",
+      sender: "Anh Lịnh",
+      role: "Anh Trai",
       avatar: "🌸",
       message: "[Thêm nội dung lời chúc vào file content.ts]",
       color: "from-purple-400 to-violet-600",
