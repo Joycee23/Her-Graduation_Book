@@ -45,7 +45,7 @@ export const chapter2 = {
       period: "2022 – 2023",
       emoji: "🌱",
       description: "Năm đầu tiên bỡ ngỡ, xa nhà, bắt đầu làm quen với cuộc sống sinh viên.",
-      message: "Anh nhớ em kể ngày đầu ký túc xá, không biết đường đến giảng đường, cứ loanh quanh mãi. Vậy mà em vẫn cười được — đó là điều anh thích nhất ở em.",
+      message: "Anh nhớ em kể ngày đầu em đến trường, không biết đường đến giảng đường, cứ loanh quanh mãi. Vậy mà em vẫn cười được — đó là điều anh thích nhất ở em.",
       photo: "/images/year1.jpg",
     },
     {
@@ -53,7 +53,7 @@ export const chapter2 = {
       period: "2023 – 2024",
       emoji: "📖",
       description: "Bắt đầu đi sâu vào chuyên ngành, nhiều đêm thức khuya với những bài tiểu luận.",
-      message: "Em bắt đầu kể về Nguyễn Du, về Tố Hữu như kể về người bạn thân. Anh không hiểu văn học nhiều, nhưng anh hiểu được sự say mê trong mắt em mỗi khi em nói.",
+      message: "Em bắt đầu kể về Nguyễn Nhật Ánh, về Tố Hữu như kể về người bạn thân. Anh không hiểu văn học nhiều, nhưng anh hiểu được sự say mê trong mắt em mỗi khi em nói.",
       photo: "/images/year2.jpg",
     },
     {
@@ -69,7 +69,7 @@ export const chapter2 = {
       period: "2025 – 2026",
       emoji: "🎓",
       description: "Luận văn, thi cử, và những ngày thực tập mệt mỏi và những ngày cuối cùng bên mái trường thân yêu.",
-      message: "Năm cuối vất vả nhất. Em áp lực nhiều hơn, mệt nhiều hơn — nhưng em cũng mạnh hơn. Và hôm nay, em đã làm được.",
+      message: "Năm cuối vất vả nhất. Em áp lực nhiều hơn, mệt nhiều hơn — nhưng em cũng mạnh mẽ hơn. Và hôm nay, em đã làm được.",
       photo: "/images/year4.jpg",
     },
     {
@@ -139,7 +139,7 @@ export const chapter4 = {
       sender: "Anh An",
       role: "Anh Trai",
       avatar: "🌸",
-      message: `Anh chị chúc mừng em gái đã tốt nghiệp đại học và chính thức trở thành cô giáo!,
+      message: `Anh chị chúc mừng em gái đã tốt nghiệp đại học và chính thức trở thành cô giáo!
 Anh rất tự hào về những nỗ lực và thành quả em đã đạt được. Chúc em luôn giữ vững nhiệt huyết với nghề, yêu thương học trò và gặt hái thật nhiều thành công trên con đường mình đã chọn❤️
 
 Mãi là niềm tự hào của gia đình nhé!`,

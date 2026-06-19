@@ -63,11 +63,11 @@ export default function Chapter2() {
         </Reveal>
 
         {/* Timeline */}
-        <div style={{ position: "relative" }}>
+        <div className="relative">
           {/* Vertical line */}
-          <div style={{ position: "absolute", left: "50%", top: 0, bottom: 0, width: "2px", transform: "translateX(-50%)", background: "linear-gradient(to bottom, transparent, #d4a853 10%, #d4a853 90%, transparent)", zIndex: 0 }} />
+          <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#d4a853] to-transparent z-0" />
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+          <div className="flex flex-col gap-12 md:gap-24">
             {chapter2.years.map((year, index) => {
               const isLeft = index % 2 === 0;
               const isActive = activeYear === index;
@@ -75,9 +75,9 @@ export default function Chapter2() {
 
               return (
                 <Reveal key={index} delay={index * 150}>
-                  <div style={{ position: "relative", display: "flex", flexDirection: "row", alignItems: "flex-start", gap: "2rem", flexWrap: "wrap" }}>
+                  <div className="relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 pl-[60px] md:pl-0 w-full">
                     {/* Content side */}
-                    <div style={{ flex: 1, minWidth: "260px", order: isLeft ? 0 : 2 }}>
+                    <div className={`flex-1 w-full ${isLeft ? "md:order-1" : "md:order-3"}`}>
                       <div
                         onClick={() => handleYearClick(index)}
                         style={{
@@ -117,15 +117,23 @@ export default function Chapter2() {
                     </div>
 
                     {/* Center dot */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, order: 1, width: "48px", height: "48px", borderRadius: "50%", background: isLast ? "#d4a853" : "rgba(13,27,42,1)", border: `2px solid ${isLast ? "#f0c878" : "#d4a853"}`, boxShadow: isLast ? "0 0 20px rgba(212,168,83,0.5)" : "0 0 10px rgba(212,168,83,0.2)", fontSize: "1.2rem", zIndex: 1, alignSelf: "center" }}>
+                    <div 
+                      className="absolute left-[24px] top-[24px] md:static md:top-auto md:left-auto -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 flex items-center justify-center shrink-0 w-12 h-12 rounded-full z-10 md:order-2" 
+                      style={{ 
+                        background: isLast ? "#d4a853" : "rgba(13,27,42,1)", 
+                        border: `2px solid ${isLast ? "#f0c878" : "#d4a853"}`, 
+                        boxShadow: isLast ? "0 0 20px rgba(212,168,83,0.5)" : "0 0 10px rgba(212,168,83,0.2)", 
+                        fontSize: "1.2rem" 
+                      }}
+                    >
                       {year.emoji}
                     </div>
 
                     {/* Photo side */}
-                    <div style={{ flex: 1, minWidth: "260px", order: isLeft ? 2 : 0 }}>
-                      <div className="photo-frame" style={{ height: "200px", position: "relative" }}>
-                        <Image src={year.photo} alt={year.year} fill className="object-cover" />
-                        <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem", zIndex: 2, fontFamily: "'Dancing Script', cursive", color: "white", fontSize: "1.1rem", textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}>
+                    <div className={`flex-1 w-full ${isLeft ? "md:order-3" : "md:order-1"}`}>
+                      <div className="photo-frame" style={{ position: "relative", overflow: "hidden", borderRadius: "1.5rem", border: "1px solid rgba(212,168,83,0.2)" }}>
+                        <Image src={year.photo} alt={year.year} width={800} height={600} className="w-full h-auto" style={{ display: "block" }} />
+                        <div style={{ position: "absolute", bottom: "1rem", left: "1rem", zIndex: 2, fontFamily: "'Dancing Script', cursive", color: "white", fontSize: "1.1rem", textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
                           {year.year}
                         </div>
                       </div>

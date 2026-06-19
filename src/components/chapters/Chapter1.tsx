@@ -98,17 +98,18 @@ export default function Chapter1() {
           <Reveal delay={400}>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {chapter1.photos.map((photo, i) => (
-                <div key={i} className="photo-frame" style={{ height: i === 0 ? "280px" : "180px", position: "relative" }}>
+                <div key={i} className="photo-frame" style={{ position: "relative", overflow: "hidden", borderRadius: "1rem", border: "1px solid rgba(212,168,83,0.2)" }}>
                   <Image
                     src={photo.src}
                     alt={photo.caption}
-                    fill
-                    className="object-cover"
-                    style={{ transition: "transform 0.6s ease" }}
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto"
+                    style={{ transition: "transform 0.6s ease", display: "block" }}
                     onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
                     onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                   />
-                  <div style={{ position: "absolute", bottom: "1rem", left: "1rem", right: "1rem", zIndex: 2, color: "white", fontFamily: "'Dancing Script', cursive", fontSize: "1rem" }}>
+                  <div style={{ position: "absolute", bottom: "1rem", left: "1rem", right: "1rem", zIndex: 2, color: "white", fontFamily: "'Dancing Script', cursive", fontSize: "1rem", textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
                     {photo.caption}
                   </div>
                 </div>
