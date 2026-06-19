@@ -139,7 +139,10 @@ export const chapter4 = {
       sender: "Anh Trai",
       role: "Anh An",
       avatar: "🌸",
-      message: "[Thêm nội dung lời chúc vào file content.ts]",
+      message: `A chị chúc mừng em gái đã tốt nghiệp đại học và chính thức trở thành cô giáo!,
+Anh rất tự hào về những nỗ lực và thành quả em đã đạt được. Chúc em luôn giữ vững nhiệt huyết với nghề, yêu thương học trò và gặt hái thật nhiều thành công trên con đường mình đã chọn❤️
+
+Mãi là niềm tự hào của gia đình nhé!`,
       color: "from-purple-400 to-violet-600",
     },
     {
@@ -150,14 +153,14 @@ export const chapter4 = {
       color: "from-purple-400 to-violet-600",
     },
     {
-      sender: "Bạn Thân",
+      sender: "Kim Oanh",
       role: "Người bạn đồng hành",
       avatar: "🤝",
-      message: "[Thêm nội dung lời chúc vào file content.ts]",
+      message: "Ủa bà tốt nghiệp rồi hả, vậy mà hai tháng trước còn than này kia. Thấy chưa bảo tin tao đii mà cứ sợ, chúc mừng bà tốt nghiệp đúng hạn he",
       color: "from-blue-400 to-cyan-600",
     },
     {
-      sender: "Bạn Thân",
+      sender: "Ther",
       role: "Người bạn đồng hành",
       avatar: "🎓",
       message: "[Thêm nội dung lời chúc vào file content.ts]",
@@ -172,7 +175,7 @@ export const chapter4 = {
 export const chapter5 = {
   title: "Thư Từ Anh",
   subtitle: "Chương V",
-  letter: `Thúy yêu,
+  letter: `Ebe của Anh,
 
 Hôm nay, ngày em mặc tà áo tốt nghiệp và nhận tấm bằng sau bốn năm nỗ lực, anh muốn viết cho em những điều mà anh chưa bao giờ nói đủ.
 
@@ -182,15 +185,15 @@ Nhưng em vẫn đứng dậy. Mỗi lần.
 
 Đó là điều anh yêu nhất ở em, Thúy ạ.
 
-Em chọn Sư phạm Ngữ Văn — không phải vì dễ, không phải vì lương cao — mà vì em thực sự yêu những trang văn, yêu con chữ, yêu việc được truyền cảm hứng cho người khác. Và anh tin, những học sinh tương lai của em sẽ rất may mắn khi có được một người thầy như em.
+Em chọn Sư phạm Ngữ Văn — không phải vì dễ, không phải vì lương cao — mà vì em thực sự yêu những trang văn, yêu con chữ, yêu việc được truyền cảm hứng cho người khác. Và anh tin, những học sinh tương lai của em sẽ rất may mắn khi có được một người cô giáo như em.
 
 Hôm nay, nhìn em trong tà áo tốt nghiệp, anh không thể không nghĩ: cô gái này đẹp nhất không phải vì áo, mà vì ánh mắt em — ánh mắt của người đã vượt qua tất cả và đang đứng đây, tự hào về chính mình.
 
-Bốn năm qua anh chứng kiến em trưởng thành. Từ cô sinh viên năm nhất bỡ ngỡ đến người sắp trở thành giáo viên — em đã thay đổi rất nhiều, nhưng trái tim em vẫn vậy: ấm áp, chân thành, và luôn cố gắng.
+Bốn năm qua có thể anh không thể chứng kiến hết quá trình em trưởng thành. Nhưng Anh biết em từ cô sinh viên năm nhất bỡ ngỡ đến người sắp trở thành giáo viên — em đã thay đổi rất nhiều, nhưng trái tim em vẫn vậy: ấm áp, chân thành, và luôn cố gắng.
 
 Cảm ơn em vì đã không bỏ cuộc. Cảm ơn em vì đã cho anh được nhìn thấy hành trình này.
 
-Chặng đường tiếp theo còn dài, Thúy ơi. Sẽ có những khó khăn mới, những áp lực mới, những lần muốn khóc khác. Nhưng anh muốn em biết — dù ở đâu, anh vẫn luôn ở đây, cổ vũ em, tin tưởng em.
+Chặng đường tiếp theo còn dài, Em ạ. Sẽ có những khó khăn mới, những áp lực mới, những lần muốn khóc khác. Nhưng anh muốn em biết — dù ở đâu, anh vẫn luôn ở đây, cổ vũ em, tin tưởng em.
 
 Chúc mừng tốt nghiệp, cô giáo tương lai của anh.
 
